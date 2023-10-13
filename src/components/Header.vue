@@ -44,7 +44,7 @@
   <style scoped>
   /* Your component-specific CSS styles go here */
   .headstyle {
-
+    top: sticky;
   }
   </style>
   
