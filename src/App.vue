@@ -1,7 +1,7 @@
 <script setup>
 import Header from './components/Header.vue';
 import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
-
+import BarcodeScanner from './components/BarcodeScanner.vue';
 
 </script>
 
