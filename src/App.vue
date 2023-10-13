@@ -7,14 +7,22 @@ import BarcodeScanner from './components/BarcodeScanner.vue';
 
 <template>
   <header>
-    <div>
+    
+  </header>
+
+    <div class="web-site-header">
       <Header></Header>
     </div>
-  </header>
 
   <main class="container">
     <BarcodeScanner class="container-item" />
     <DisplayBarcodesList class="container-item" />
+        <!--
+        <audio controls autoplay>
+            <source src="https://www.myinstants.com/media/sounds/store-scanner-beep-sound-effect.mp3" type="audio/mp3">
+        </audio>
+        -->
+    
   </main>
 </template>
 
@@ -25,6 +33,13 @@ import BarcodeScanner from './components/BarcodeScanner.vue';
 .container-item {
   display: flex;
 }
+
+.web-site-header {
+  position: sticky;
+  top: sticky;
+  top: 0;
+}
+
 header {
   line-height: 1.5;
 }
