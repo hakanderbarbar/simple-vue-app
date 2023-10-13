@@ -1,46 +1,52 @@
 <template>
-    <div>
-      <!-- Your component's template here -->
-      <h1>{{ message }}</h1>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'MyComponent', // Replace 'MyComponent' with your component name
-  
-    data() {
-      return {
-        message: 'Hello, Vue 3!', // Your data properties go here
-      };
+  <div>
+    <h1>Barcode Scanner</h1>
+    <button @click="showMessage">Zeige Nachricht</button>
+    <p>Barcode-Wert: {{ scannedBarcodeValue }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'BarcodeScanner',
+
+  data() {
+    return {
+      barcodeData: [
+        { code: '12345', value: 42 },
+        { code: '67890', value: 99 },
+        // Weitere Einträge für verschiedene Barcodes und Werte
+      ],
+      scannedBarcode: '', // Hier wird der gescannte Barcode-Wert "code" gespeichert
+      scannedBarcodeValue: null, // Hier wird der zugehörige Wert "value" gespeichert
+    };
+  },
+
+  methods: {
+    showMessage() {
+      if (this.scannedBarcode) {
+        // Suche nach dem gescannten Barcode in der Datenliste
+        const barcodeEntry = this.barcodeData.find(
+          (entry) => entry.code === this.scannedBarcode
+        );
+
+        if (barcodeEntry) {
+          this.scannedBarcodeValue = barcodeEntry.value;
+        } else {
+          this.scannedBarcodeValue = 'Barcode nicht gefunden';
+        }
+      } else {
+        this.scannedBarcodeValue = 'Kein Barcode gescannt';
+      }
     },
-  
-    // You can define methods here
-    methods: {
-      // Example method
-      showMessage() {
-        alert(this.message);
-      },
-    },
-  
-    // You can also define computed properties
-    computed: {
-      // Example computed property
-      reversedMessage() {
-        return this.message.split('').reverse().join('');
-      },
-    },
-  
-    // You can add lifecycle hooks like created, mounted, etc.
-    created() {
-      console.log('Component created');
-    },
-  };
-  
-  </script>
-  
-  <style scoped>
-  /* Your component-specific CSS styles go here */
-  </style>
-  
-  
+  },
+
+  created() {
+    console.log('Component created');
+  },
+};
+</script>
+
+<style scoped>
+/* Your component-specific CSS styles go here */
+</style>
