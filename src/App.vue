@@ -1,6 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import TheWelcome from './components/TheWelcome.vue';
 import Header from './components/Header.vue';
 import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
 
@@ -9,22 +7,23 @@ import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
 
 <template>
   <header>
-    
-
     <div>
       <Header></Header>
     </div>
   </header>
 
   <main class="container">
-    <BarcodeScanner />
-    <DisplayBarcodesList />
+    <BarcodeScanner class="container-item" />
+    <DisplayBarcodesList class="container-item" />
   </main>
 </template>
 
 <style scoped>
 .container {
   overflow: hidden;
+}
+.container-item {
+  display: flex;
 }
 header {
   line-height: 1.5;
