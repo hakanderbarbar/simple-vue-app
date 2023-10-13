@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="headstyle">
       <!-- Your component's template here -->
       <h1>{{ message }}</h1>
+      <p> {{ text }} </p>
     </div>
   </template>
   
@@ -11,7 +12,8 @@
   
     data() {
       return {
-        message: 'Hello, Vue 3!', // Your data properties go here
+        message: 'Barcode Scanner', // Your data properties go here
+        text: 'Please scan your Barcode using the Camera',
       };
     },
   
@@ -41,6 +43,9 @@
   
   <style scoped>
   /* Your component-specific CSS styles go here */
+  .headstyle {
+
+  }
   </style>
   
   
