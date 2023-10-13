@@ -1,7 +1,7 @@
 <script setup>
 import Header from './components/Header.vue';
 import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
-import BarcodeScanner from './components/BarcodeScanner.vue';
+import CameraScanner from './components/CameraScanner.vue';
 
 </script>
 
@@ -15,7 +15,7 @@ import BarcodeScanner from './components/BarcodeScanner.vue';
     </div>
 
   <main class="container">
-    <BarcodeScanner class="container-item" />
+    <CameraScanner  />
     <DisplayBarcodesList class="container-item" />
         <!--
         <audio controls autoplay>
