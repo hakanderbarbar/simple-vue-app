@@ -1,6 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import TheWelcome from './components/TheWelcome.vue';
+import Header from './components/Header.vue';
+import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
+import BarcodeScanner from './components/BarcodeScanner.vue';
 </script>
 
 <template>
