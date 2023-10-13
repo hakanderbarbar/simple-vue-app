@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'BarcodeScanner',
+  name: 'DisplayBarcodesList',
 
   data() {
     return {
