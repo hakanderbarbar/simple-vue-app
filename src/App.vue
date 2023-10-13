@@ -7,10 +7,12 @@ import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
 
 <template>
   <header>
-    <div>
+    
+  </header>
+
+    <div class="web-site-header">
       <Header></Header>
     </div>
-  </header>
 
   <main class="container">
     <BarcodeScanner class="container-item" />
@@ -25,6 +27,13 @@ import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
 .container-item {
   display: flex;
 }
+
+.web-site-header {
+  position: sticky;
+  top: sticky;
+  top: 0;
+}
+
 header {
   line-height: 1.5;
 }
