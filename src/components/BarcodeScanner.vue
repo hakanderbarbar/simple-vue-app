@@ -30,6 +30,9 @@ export default {
       }else if(result == 42143819){
         this.name = "Saskia Wasserflasche"
         this.cost = 0.15
+      }else if(result == 90433221){
+        this.name = "Red Bull Acai"
+        this.cost = 1.19
       }else {
         this.name = "unbekannt"
         this.cost = "?"
@@ -44,7 +47,7 @@ export default {
     <h1>Barcode Reader App</h1>
   </header>
   <body>
-    <StreamBarcodeReader id="VideoStream" @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+    <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
     <p>The Barcode is: {{ code }}</p>
     <p> Your product is: {{ name }}</p>
     <p>Your product costs {{ cost }}€</p>

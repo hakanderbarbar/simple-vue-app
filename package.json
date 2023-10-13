@@ -16,6 +16,7 @@
     "vue-web-cam": "^1.9.0"
   },
   "devDependencies": {
+    "@types/vue-barcode-reader": "^0.0.1",
     "@vitejs/plugin-vue": "^4.3.4",
     "vite": "^4.4.9"
   }
