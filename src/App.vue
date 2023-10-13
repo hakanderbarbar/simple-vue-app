@@ -17,6 +17,12 @@ import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
   <main class="container">
     <BarcodeScanner class="container-item" />
     <DisplayBarcodesList class="container-item" />
+        <!--
+        <audio controls autoplay>
+            <source src="https://www.myinstants.com/media/sounds/store-scanner-beep-sound-effect.mp3" type="audio/mp3">
+        </audio>
+        -->
+    
   </main>
 </template>
 
