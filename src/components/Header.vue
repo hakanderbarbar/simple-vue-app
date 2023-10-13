@@ -8,7 +8,7 @@
   
   <script>
   export default {
-    name: 'MyComponent', // Replace 'MyComponent' with your component name
+    name: 'Header', // Replace 'MyComponent' with your component name
   
     data() {
       return {
