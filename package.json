@@ -12,6 +12,7 @@
     "npm": "^10.2.0",
     "vue": "^3.3.4",
     "vue-barcode-reader": "^1.0.3",
+    "vue-barcode-scanner": "^0.8.1",
     "vue-web-cam": "^1.9.0"
   },
   "devDependencies": {

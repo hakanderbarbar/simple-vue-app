@@ -1,33 +1,54 @@
-<template>
-  <div>
-    <vue-barcode-reader @decode="onDecode" @loaded="onLoaded"></vue-barcode-reader>
-    <h2>The decoded value in QR/barcode is</h2>
-    <h2>{{ decodedText }}</h2>
-  </div>
-</template>
-
-<script setup>
-import { ref, onMounted } from 'vue';
+<script>
 import { StreamBarcodeReader } from 'vue-barcode-reader';
 
-const decodedText = ref('');
+export default {
+  components :{
+    StreamBarcodeReader,
+  },
+  data(){
+    return{
+      code: undefined,
+      name: undefined,
+      cost: undefined
+    }
+  },
+  methods: {
+    onLoaded(){
+      console.log("LOADED!!!")
+    }, 
+    onDecode (result) {
 
-const onLoaded = () => {
-  console.log('Barcode scanner loaded');
-  startScanning(); // Starten Sie das Scannen, wenn der Barcode-Scanner geladen ist
-};
+      this.code = result
+      console.log(result)
 
-const onDecode = (text) => {
-  decodedText.value = text;
-};
-
-const startScanning = () => {
-  const scanner = new StreamBarcodeReader();
-  scanner.initScanner();
-  scanner.startScanner();
-};
-
-onMounted(() => {
-  startScanning(); // Starten Sie das Scannen, wenn die Komponente montiert ist
-});
+      if(result == 4337185051937 ){
+        this.name = "K-Classic Wasserflasche"
+        this.cost = 0.29
+      }else if(result == 90446832){
+        this.name = "Red Bull"
+        this.cost = 1.49
+      }else if(result == 42143819){
+        this.name = "Saskia Wasserflasche"
+        this.cost = 0.15
+      }else {
+        this.name = "unbekannt"
+        this.cost = "?"
+      }
+    }
+  }
+}
 </script>
+
+<template>
+  <header>
+    <h1>Barcode Reader App</h1>
+  </header>
+  <body>
+    <StreamBarcodeReader id="VideoStream" @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+    <p>The Barcode is: {{ code }}</p>
+    <p> Your product is: {{ name }}</p>
+    <p>Your product costs {{ cost }}€</p>
+  </body>
+</template>
+
+

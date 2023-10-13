@@ -1,7 +1,6 @@
 <script setup>
 import Header from './components/Header.vue';
-import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
-import CameraScanner from './components/CameraScanner.vue';
+import BarcodeScanner from './components/BarcodeScanner.vue';
 
 </script>
 
@@ -15,14 +14,9 @@ import CameraScanner from './components/CameraScanner.vue';
     </div>
 
   <main class="container">
-    <CameraScanner  />
-    <DisplayBarcodesList class="container-item" />
-        <!--
-        <audio controls autoplay>
-            <source src="https://www.myinstants.com/media/sounds/store-scanner-beep-sound-effect.mp3" type="audio/mp3">
-        </audio>
-        -->
-    
+
+    <BarcodeScanner/>    
+
   </main>
 </template>
 
