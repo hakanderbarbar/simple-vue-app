@@ -16,14 +16,16 @@ import DisplayBarcodesList from './components/DisplayBarcodesList.vue';
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <BarcodeScanner />
     <DisplayBarcodesList />
-    <TheWelcome />
   </main>
 </template>
 
 <style scoped>
+.container {
+  overflow: hidden;
+}
 header {
   line-height: 1.5;
 }
